@@ -48,7 +48,7 @@ def encrypt_response(data):
     ct = base64.b64encode(ciphertext_bytes).decode('utf-8')
     return {"raw": f"{iv}.{ct}"}
 
-@app.route('/task1/hello', methods=['GET'])
+@app.route('/', methods=['GET'])
 def hello():
   return jsonify({"Hello": "World!"}), 401
   
